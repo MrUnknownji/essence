@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essence</title>
+    <meta name="description" content="Strip away the noise. Find what remains.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-[#0a0a0a] text-[#e5e5e5] font-['Cormorant_Garamond',serif] overflow-hidden">
+
+    <!-- Loading Screen -->
+    <div id="loading" class="fixed inset-0 z-50 bg-[#0a0a0a] flex flex-col items-center justify-center text-center p-6">
+        <h1 class="text-4xl md:text-6xl tracking-[0.4em] uppercase opacity-0 loading-text mb-4">Essence</h1>
+        <p class="text-lg md:text-xl tracking-widest opacity-0 loading-subtext italic text-[#888]">Strip away the noise.
+            Find what remains.</p>
+    </div>
+
+    <!-- Main Container -->
+    <main id="main" class="h-screen w-screen opacity-0">
+
+        <!-- Section Grid -->
+        <div id="grid" class="grid grid-cols-1 md:grid-cols-2 h-full w-full">
+
+            <!-- 1. Finding Light -->
+            <section data-section="darkroom"
+                class="section relative flex items-center justify-center cursor-pointer border-b md:border-b md:border-r border-[#1a1a1a] transition-all duration-700"
+                aria-label="Finding Light" tabindex="0">
+                <div class="section-preview text-center p-8">
+                    <div class="darkroom-icon mb-6 mx-auto"></div>
+                    <h2 class="text-xl md:text-2xl tracking-wider">Finding Light</h2>
+                </div>
+            </section>
+
+            <!-- 2. Here & Now -->
+            <section data-section="circle"
+                class="section relative flex items-center justify-center cursor-pointer border-b border-[#1a1a1a] transition-all duration-700"
+                aria-label="Here & Now" tabindex="0">
+                <div class="section-preview text-center p-8">
+                    <div class="circle-icon mb-6 mx-auto"></div>
+                    <h2 class="text-xl md:text-2xl tracking-wider">Here & Now</h2>
+                </div>
+            </section>
+
+            <!-- 3. Still Standing -->
+            <section data-section="battery"
+                class="section relative flex items-center justify-center cursor-pointer md:border-r border-[#1a1a1a] transition-all duration-700"
+                aria-label="Still Standing" tabindex="0">
+                <div class="section-preview text-center p-8">
+                    <div class="battery-icon mb-6 mx-auto"></div>
+                    <h2 class="text-xl md:text-2xl tracking-wider">Still Standing</h2>
+                </div>
+            </section>
+
+            <!-- 4. Letting Go -->
+            <section data-section="ghost"
+                class="section relative flex items-center justify-center cursor-pointer transition-all duration-700"
+                aria-label="Letting Go" tabindex="0">
+                <div class="section-preview text-center p-8">
+                    <div class="ghost-icon mb-6 mx-auto"></div>
+                    <h2 class="text-xl md:text-2xl tracking-wider">Letting Go</h2>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Expanded Views (Hidden by default) -->
+
+        <!-- Finding Light Expanded -->
+        <div id="darkroom-expanded" class="expanded-view darkroom-view">
+            <button class="close-btn" aria-label="Close">&times;</button>
+            <div class="darkroom-canvas" id="darkroom-canvas"></div>
+            <div class="expanded-content darkroom-content">
+                <p class="darkroom-hint">Click anywhere for something you're grateful for</p>
+                <p class="message">"Gratitude turns what we have<br>into enough."</p>
+            </div>
+        </div>
+
+        <!-- Circle Expanded -->
+        <div id="circle-expanded" class="expanded-view">
+            <button class="close-btn" aria-label="Close">&times;</button>
+            <div class="expanded-content">
+                <div class="breathing-container">
+                    <div class="breathing-circle"></div>
+                    <p class="breathing-instruction">Breathe</p>
+                </div>
+                <p class="message">"This breath is the only moment that is real."</p>
+            </div>
+        </div>
+
+        <!-- Battery Expanded -->
+        <div id="battery-expanded" class="expanded-view">
+            <button class="close-btn" aria-label="Close">&times;</button>
+            <div class="expanded-content">
+                <div class="battery-large">
+                    <div class="battery-body">
+                        <div class="battery-level"></div>
+                    </div>
+                    <div class="battery-tip"></div>
+                </div>
+                <p class="battery-percent">1%</p>
+                <p class="message">"Even on 1%, you can still make the call.<br>Keep going."</p>
+            </div>
+        </div>
+
+        <!-- Ghost Expanded -->
+        <div id="ghost-expanded" class="expanded-view">
+            <button class="close-btn" aria-label="Close">&times;</button>
+            <div class="expanded-content ghost-content">
+                <div class="ghost-input-container">
+                    <input type="text" id="ghost-input" class="ghost-input"
+                        placeholder="Type what weighs on your mind..." autocomplete="off">
+                    <p class="ghost-hint">Press Enter or wait... and let it go.</p>
+                </div>
+                <p class="message">"Let go of what you cannot control."</p>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

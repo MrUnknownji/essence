@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Background circle for contrast on light themes -->
+  <circle cx="50" cy="50" r="48" fill="#1a1a1a"/>
+  
+  <!-- Outer ring - represents the cycle of breath, the wholeness -->
+  <circle cx="50" cy="50" r="40" stroke="#a0a0a0" stroke-width="1.5" opacity="0.6"/>
+  
+  <!-- Inner essence - the core, what remains after stripping away noise -->
+  <circle cx="50" cy="50" r="8" fill="#f0f0f0"/>
+  
+  <!-- Radiating lines - four paths (gratitude, presence, resilience, release) -->
+  <line x1="50" y1="18" x2="50" y2="35" stroke="#c0c0c0" stroke-width="1.5" opacity="0.7"/>
+  <line x1="50" y1="65" x2="50" y2="82" stroke="#c0c0c0" stroke-width="1.5" opacity="0.7"/>
+  <line x1="18" y1="50" x2="35" y2="50" stroke="#c0c0c0" stroke-width="1.5" opacity="0.7"/>
+  <line x1="65" y1="50" x2="82" y2="50" stroke="#c0c0c0" stroke-width="1.5" opacity="0.7"/>
+  
+  <!-- Soft glow around center -->
+  <circle cx="50" cy="50" r="16" stroke="#d0d0d0" stroke-width="0.75" opacity="0.4"/>
+</svg>
